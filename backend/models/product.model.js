@@ -14,6 +14,23 @@ const productSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
+		approved: {
+			type: Boolean,
+			default: true,
+		},
+		isSubmitted: {
+			type: Boolean,
+			default: false,
+		},
+		submittedBy: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'User',
+			default: null,
+		},
+		sales: {
+			type: Number,
+			default: 0,
+		},
 	},
 	{
 		timestamps: true, // createdAt, updatedAt

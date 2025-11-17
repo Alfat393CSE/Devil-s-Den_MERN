@@ -19,70 +19,84 @@ const HomePage = () => {
 		<Container maxW='container.xl' py={12}>
 			<VStack spacing={8}>
 
-        <HStack spacing={4} justify='center'>
+				<HStack spacing={4} justify='center'>
 					<Image src={logo} alt='Brand Logo' boxSize='60px' borderRadius='full' />
+
 					<Text
-						fontSize={"3xl"}
-						fontWeight={"extrabold"}
-						bgGradient={"linear(to-r, cyan.400, blue.500)"}
-						bgClip={"text"}
+						fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+						fontWeight="extrabold"
+						bgGradient="linear(to-r, cyan.400, blue.500)"
+						bgClip="text"
+						textShadow="2px 3px 6px rgba(0, 0, 0, 0.25)"
+						letterSpacing="tight"
 					>
 						Welcome to Our Store 🚀
 					</Text>
 				</HStack>
 
 				<Text
-	fontSize={{ base: "md", md: "lg", lg: "xl" }}
-	color="gray.600"
-	maxW="3xl"
-	textAlign="center"
-	lineHeight="tall"
-	fontWeight="medium"
-	letterSpacing="wide"
->
-	Discover the{" "}
-	<Text
-		as="span"
-		bgGradient="linear(to-r, cyan.400, blue.500)"
-		bgClip="text"
-		fontWeight="semibold"
-	>
-		latest products
-	</Text>{" "}
-	carefully curated to bring you{" "}
-	<Text
-		as="span"
-		color="blue.600"
-		fontWeight="semibold"
-	>
-		quality
-	</Text>
-	,{" "}
-	<Text
-		as="span"
-		color="cyan.600"
-		fontWeight="semibold"
-	>
-		style
-	</Text>
-	, and{" "}
-	<Text
-		as="span"
-		color="teal.600"
-		fontWeight="semibold"
-	>
-		innovation
-	</Text>
-	. We aim to provide the{" "}
-	<Text as="span" fontWeight="semibold" color="purple.600">
-		best shopping experience
-	</Text>{" "}
-	— browse our collection below!
-</Text>
+					fontSize={{ base: "md", md: "lg", lg: "xl" }}
+					color="gray.600"
+					maxW="3xl"
+					textAlign="center"
+					lineHeight="tall"
+					fontWeight="medium"
+					letterSpacing="wide"
+					mt={4}
+					textShadow="1px 2px 4px rgba(0, 0, 0, 0.15)"
+				>
+					Discover the{" "}
+					<Text
+						as="span"
+						bgGradient="linear(to-r, cyan.400, blue.500)"
+						bgClip="text"
+						fontWeight="semibold"
+						textShadow="1px 2px 4px rgba(0, 0, 0, 0.3)"
+					>
+						latest products
+					</Text>{" "}
+					carefully curated to bring you{" "}
+					<Text
+						as="span"
+						color="blue.600"
+						fontWeight="semibold"
+						textShadow="1px 2px 4px rgba(0, 0, 0, 0.25)"
+					>
+						quality
+					</Text>
+					,{" "}
+					<Text
+						as="span"
+						color="cyan.600"
+						fontWeight="semibold"
+						textShadow="1px 2px 4px rgba(0, 0, 0, 0.25)"
+					>
+						style
+					</Text>
+					, and{" "}
+					<Text
+						as="span"
+						color="teal.600"
+						fontWeight="semibold"
+						textShadow="1px 2px 4px rgba(0, 0, 0, 0.25)"
+					>
+						innovation
+					</Text>
+					. We aim to provide the{" "}
+					<Text
+						as="span"
+						fontWeight="semibold"
+						color="purple.600"
+						textShadow="1px 2px 4px rgba(0, 0, 0, 0.25)"
+					>
+						best shopping experience
+					</Text>{" "}
+					— browse our collection below!
+				</Text>
 
 
 
-        
+
 				<Text
 					fontSize={"30"}
 					fontWeight={"bold"}
