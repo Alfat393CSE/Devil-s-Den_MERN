@@ -1,4 +1,4 @@
-import { Box, Heading, VStack, useColorModeValue, Container, Input, useToast } from '@chakra-ui/react'
+import { Box, Heading, VStack, useColorModeValue, Container, Input, useToast, FormControl, FormLabel } from '@chakra-ui/react'
 import { useState } from 'react'
 import { Button } from '@chakra-ui/react'
 import { useProductStore } from "../store/product";
@@ -9,7 +9,9 @@ const CreatePage = () => {
   const [newProduct, setNewProduct] = useState({
     name: "",
     price: "",
-    image: ""
+    image: "",
+    stock: 0,
+    description: ""
   });
 
   const toast = useToast();
@@ -37,7 +39,7 @@ const CreatePage = () => {
         position: "top"
       });
     }
-    setNewProduct({ name: "", price: "", image: "" });
+    setNewProduct({ name: "", price: "", image: "", stock: 0, description: "" });
   };
 
   return (
@@ -78,6 +80,28 @@ const CreatePage = () => {
               value={newProduct.image}
               onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })}
             />
+
+            <Input
+              placeholder="Description"
+              name="description"
+              value={newProduct.description}
+              onChange={(e) => setNewProduct({ ...newProduct, description: e.target.value })}
+            />
+
+            <FormControl>
+              <FormLabel>Stock Quantity (Admin sets manually, default 0)</FormLabel>
+              <Input
+                placeholder="Stock (e.g., 100)"
+                name="stock"
+                type="number"
+                min="0"
+                value={newProduct.stock}
+                onChange={(e) => {
+                  const value = Number(e.target.value) || 0;
+                  setNewProduct({ ...newProduct, stock: value });
+                }}
+              />
+            </FormControl>
 
             <Button colorScheme='blue' onClick={handleAddProduct} w={'full'}>
               Add Product

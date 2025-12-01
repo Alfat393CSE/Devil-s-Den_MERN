@@ -31,12 +31,22 @@ const productSchema = new mongoose.Schema(
 			type: Number,
 			default: 0,
 		},
+		stock: {
+			type: Number,
+			required: true,
+			default: 0,
+			min: 0,
+		},
+		description: {
+			type: String,
+			default: '',
+		},
 	},
 	{
 		timestamps: true, // createdAt, updatedAt
 	}
 );
 
-const Product = mongoose.model("Product", productSchema);
+const Product = mongoose.models.Product || mongoose.model("Product", productSchema);
 
 export default Product;

@@ -25,6 +25,7 @@
     "@chakra-ui/react": "^2.10.9",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "date-fns": "^4.1.0",
     "framer-motion": "^12.23.12",
     "mern": "file:..",
     "next-themes": "^0.4.6",
